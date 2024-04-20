@@ -1,6 +1,31 @@
 # data-management
 This repository hosts the source code for a Spring Boot application designed to manage Data Collections and Data Files. It provides robust RESTful APIs for creating, updating, deleting, and retrieving data collections.
 
+# API Test
+# GET 
+URL:http://localhost:8080/api/data-collections
+
+
+# POST
+URL: http://localhost:8080/api/data-collections
+Body: 
+{
+  "fileIdOrders": 1,
+  "fileIdAssets": 9,
+  "fileIdInventory": 10,
+  "status": "Active",
+  "tag": "New Collection",
+  "note": "This is a new data"
+}
+
+# PUT
+URL: http://localhost:8080/api/data-collections/6?fileIdAssets=7&fileIdInventory=10&fileIdOrders=1
+you can change the query params and update accordingly.
+
+# Delete
+URL: http://localhost:8080/api/data-collections/4
+
+
 # Test case
 1. Post Data
 	a. Try to insert Null value for not null columns
